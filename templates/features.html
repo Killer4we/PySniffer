@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Packet Sniffer Features</title>
+</head>
+<body>
+    <h1>Packet Sniffer Features</h1>
+    <table>
+        <tr>
+            <th>Host</th>
+            <th>Path</th>
+        </tr>
+        {% for packet in features %}
+        <tr>
+            <td>{{ packet.host }}</td>
+            <td>{{ packet.path }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
