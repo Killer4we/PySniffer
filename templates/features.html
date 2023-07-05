@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Packet Sniffer Features</title>
+    <title>Packet Features</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Packet Sniffer Features</h1>
+    <h1>Packet Features</h1>
     <table>
-        <tr>
-            <th>Host</th>
-            <th>Path</th>
-        </tr>
-        {% for packet in features %}
-        <tr>
-            <td>{{ packet.host }}</td>
-            <td>{{ packet.path }}</td>
-        </tr>
-        {% endfor %}
+        <thead>
+            <tr>
+                <th>Source IP</th>
+                <th>Destination IP</th>
+                <th>Source Port</th>
+                <th>Destination Port</th>
+                <th>Payloads</th>
+                <th>Protocol</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for packet in packets %}
+            <tr>
+                <td>{{ packet['src_ip'] }}</td>
+                <td>{{ packet['dst_ip'] }}</td>
+                <td>{{ packet['src_port'] }}</td>
+                <td>{{ packet['dst_port'] }}</td>
+                <td>{{ packet['payloads'] }}</td>
+                <td>{{ packet['protocol'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
 </body>
 </html>
