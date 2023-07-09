@@ -9,6 +9,9 @@ captured_packets = []
 @app.route('index.css')
 def index_css():
     return send_file('css/index.css')
+@app.route('/')
+def index():
+    return open("index.js").read()
 
 @app.route('/')
 def index():
