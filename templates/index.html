@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="/templates/css/index.css">
     <title>Packet Sniffer</title>
 </head>
 <body>
+    <div class="topnav">
+
+        <!-- Centered link -->
+        <div class="topnav-centered">
+          <a href="#home" class="active">Home</a>
+        </div>
+      
+        <!-- Left-aligned links (default) -->
+        <a href="#team">Team</a>
+        <a href="#contact">Contact Us</a>
+      
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+          
+          <a href="#links">Links</a>
+        </div>
+      
+      </div>
     <h1>Packet Sniffer</h1>
     <form action="/sniff" method="POST">
-        <button type="submit" name="start">Start Sniffing</button>
-        <button type="submit" name="stop">Stop Sniffing</button>
+        <div id="main">
+        <button id = "button1" class = "buttons"type="submit" name="start">Start Sniffing</button>
+        <button id = "button2" class = "buttons" type="submit" name="stop">Stop Sniffing</button>
+        </div>
     </form>
+    
 </body>
 </html>
 
