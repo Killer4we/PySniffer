@@ -2,9 +2,13 @@ from flask import Flask, render_template, request
 from scapy.all import sniff, TCP, UDP, IP
 
 app = Flask(__name__)
-
+# app1 = Flask(__name__,static_folder = 'css')
 # Global variables
 captured_packets = []
+
+@app.route('index.css')
+def index_css():
+    return send_file('css/index.css')
 
 @app.route('/')
 def index():
