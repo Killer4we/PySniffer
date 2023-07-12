@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from scapy.all import sniff, TCP, UDP, IP
+import os
 
 app = Flask(__name__)
 # app1 = Flask(__name__,static_folder = 'css')
@@ -16,7 +17,25 @@ def index():
 @app.route('/')
 def index():
     return render_template('index.html')
+@app.route('/abhinavtomar.jpeg')
+def serve_image():
+    # Get the current directory path
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    image_path = os.path.join(current_dir, 'abhinavtomar.jpeg')
+    return send_file(image_path, mimetype='image/jpeg')
 
+@app.route('/harshith.jpeg')
+def serve_image():
+    # Get the current directory path
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    image_path = os.path.join(current_dir, 'harshith.jpeg')
+    return send_file(image_path, mimetype='image/jpeg')
+@app.route('/parul.jpeg')
+def serve_image():
+    # Get the current directory path
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    image_path = os.path.join(current_dir, 'parul.jpeg')
+    return send_file(image_path, mimetype='image/jpeg')
 @app.route('/sniff', methods=['POST'])
 def start_sniffing():
     global captured_packets

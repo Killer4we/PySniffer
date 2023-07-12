@@ -1,6 +1,11 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
+    /* background-image: url("/PySniffer/templates/background.jpg"); */
+    /* background-color: green; */
     /* margin: 0px; */
+}
+html{
+  scroll-behavior: smooth;
 }
 .buttons:hover{
     cursor: pointer;
@@ -87,4 +92,75 @@ h1{
   /* Right-aligned section inside the top navigation */
 .topnav-right {
     float: right;
+}
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 30%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.row{
+  margin-left: 50px;
+  margin-top: 20px;
+  height: 100px;
+  /* height: 400px; */
+  /* background-color: cornflowerblue; */
+  /* align-items: center; */
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 550px;
+  margin-left: 20px;
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+.img{
+  height: 300px;
+  /* width: 50px; */
+}
+#harsh-p{
+  padding-right: 10px;
+  font-size: 15px;
+}
+.heading-about{
+  text-align: center;
+  padding-top: 5px;
+}
+.about-paragraph{
+  text-align: center;
+  padding-bottom: 30px;
+  /* padding-top: 20px; */
+}
+span{
+  color: coral;
+}
+hr{
+  margin-bottom: 20px;
 }
