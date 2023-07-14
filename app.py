@@ -7,35 +7,10 @@ app = Flask(__name__)
 # Global variables
 captured_packets = []
 
-@app.route('index.css')
-def index_css():
-    return send_file('css/index.css')
-@app.route('/')
-def index():
-    return open("index.js").read()
-
 @app.route('/')
 def index():
     return render_template('index.html')
-@app.route('/abhinavtomar.jpeg')
-def serve_image():
-    # Get the current directory path
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    image_path = os.path.join(current_dir, 'abhinavtomar.jpeg')
-    return send_file(image_path, mimetype='image/jpeg')
 
-@app.route('/harshith.jpeg')
-def serve_image():
-    # Get the current directory path
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    image_path = os.path.join(current_dir, 'harshith.jpeg')
-    return send_file(image_path, mimetype='image/jpeg')
-@app.route('/parul.jpeg')
-def serve_image():
-    # Get the current directory path
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    image_path = os.path.join(current_dir, 'parul.jpeg')
-    return send_file(image_path, mimetype='image/jpeg')
 @app.route('/sniff', methods=['POST'])
 def start_sniffing():
     global captured_packets
